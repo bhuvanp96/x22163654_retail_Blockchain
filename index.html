@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Retail Store</title>
+        <title>Anime Retail Store</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- Add Web3 Script -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.9.0/web3.min.js" integrity="sha512-mUvdtCaVKd9dby/UnYGKMLkP3eT7EA6QNFN5iSEjvMf8TFPq2oZFIemWL46iypQcL8xYNdx7wQIA1oYnTXuYhg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -111,7 +111,7 @@ header button:first-child {
     </head>
     <body>
         <header>
-            <h1>Retail Store</h1>
+            <h1>Anime Retail Store</h1>
             <button id="connect-metamask">Connect to Metamask</button>
             <button id="disconnect-metamask">Disconnect from Metamask</button>
             <button id="register-doctor-btn">Register User</button>
@@ -350,36 +350,6 @@ header button:first-child {
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "makePayment",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_id",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_name",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_speciality",
-				"type": "string"
-			}
-		],
-		"name": "registerDoctor",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [
 			{
 				"internalType": "address",
@@ -448,6 +418,13 @@ header button:first-child {
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"name": "makePayment",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "address",
@@ -470,9 +447,32 @@ header button:first-child {
 		],
 		"stateMutability": "view",
 		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_id",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_speciality",
+				"type": "string"
+			}
+		],
+		"name": "registerDoctor",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
 	}
 ]; // Taking ABI from Remix
-            const Address = "0x09f7B63b26810D29ac22a7713b8C2e169A41ED66"; // Taking Address from Remix 
+            const Address = "0xc76064e8b5ce27faade8789b4ade3f0f861bf50c"; // Taking Address from Remix 
             window.web3 = await new Web3(window.ethereum);
             window.contract = await new window.web3.eth.Contract(ABI, Address);
         }
